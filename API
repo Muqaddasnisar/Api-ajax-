@@ -1,0 +1,45 @@
+```<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <!-- Your existing HTML code -->
+
+    <script>
+        // Example AJAX request to a hypothetical API endpoint
+        $(document).ready(function() {
+            // Replace the API_ENDPOINT with your actual API URL
+            const apiEndpoint = 'https://example.com/api';
+
+            // Example AJAX request when clicking a button
+            $('#submitButton').click(function() {
+                // Make sure to replace this with your actual data
+                const requestData = {
+                    key1: 'value1',
+                    key2: 'value2'
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: apiEndpoint,
+                    data: JSON.stringify(requestData),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        // Handle the API response and update your UI accordingly
+                        console.log(response);
+                    },
+                    error: function(error) {
+                        // Handle errors
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>``
